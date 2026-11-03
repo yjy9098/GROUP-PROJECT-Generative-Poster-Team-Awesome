@@ -8,17 +8,17 @@
 
 ## About the Project
 
-[Write a short description of your project. What was the idea behind your poster generator? What visual qualities or design ideas inspired it? How does the program combine everyone's individual tile designs into a unified composition?]
+This project is used to create an interactive poster design where users can customize an array of different colorful tiles. It uses color palette and designs from all three creators to make a unified composition.
 
 ## The Interface
 
-What can the users modify?
+Users can modify poster title, authorship, color palette, and how many rows and columns of tiles the poster uses.
 
 ## Meet the Designers
 
 - **Jingyi:** [Brief description of their tile designs or contribution.]
 - **Emma:** [Brief description of their tile designs or contribution.]
-- **Tae:** [Brief description of their tile designs or contribution.]
+- **Tae:** Designed user-facing prompts and created randomized palette. 
 
 ## Try it yourself
 
