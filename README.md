@@ -16,9 +16,9 @@ Users can modify poster title, authorship, color palette, and how many rows and 
 
 ## Meet the Designers
 
-- **Jingyi:** [Brief description of their tile designs or contribution.]
-- **Emma:** Designed the canvas configuration, tile size, and controlling th generative behavior. My tile designs were initially inspire by my color palette I had chosen. I wanted my colors to be bright, fun and feel almost tropical. Then from there I wanted my design to match the color palette and have some floral and nature motifs. 
-- **Tae:** Designed user-facing prompts and created randomized palette. 
+- **Jingyi:** Positioned and rendered the poster text, built the color swatch display with RGB values, and managed performance for fast rendering. Color palette and tiles were inspired by traditional Chinese elements and colors. 
+- **Emma:** Designed the canvas configuration, tile size, and controlling the generative behavior. My tile designs were initially inspire by my color palette I had chosen. I wanted my colors to be bright, fun and feel almost tropical. Then from there I wanted my design to match the color palette and have some floral and nature motifs. 
+- **Tae:** Designed user-facing prompts with while-loops and created generator to make a randomized palette. Color palette and tiles were inspired by early 2000's technology advertisements. 
 
 ## Try it yourself
 
