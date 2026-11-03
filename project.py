@@ -10,7 +10,7 @@ from PaletteOptions import *
 # Create one function to handle everything
 def generate_poster():
   
- title_text = input("What would you like the poster title to be?")
+  title_text = input("What would you like the poster title to be?")
   poster_name = input("What is your name?")
   
   color_choice = input("What color palette would you like?")
