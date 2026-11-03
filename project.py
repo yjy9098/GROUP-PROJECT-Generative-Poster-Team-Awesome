@@ -154,7 +154,7 @@ def generate_poster():
           current_x = current_x + boxsize + gapsize
   
   
-  poster_tc(t,palette_options[color_choice])
+  poster_tc(t,palette)
   
   grid_right = x_offset + size * ncols
   
