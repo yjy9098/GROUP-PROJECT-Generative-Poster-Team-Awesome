@@ -110,3 +110,59 @@ for row in range(nrows):
 
 t.hideturtle()
 done()
+
+
+
+def poster_tc(t, palette):
+
+    boxsize = 950/ 20
+    gapsize = 950 / 7
+
+    total_width = (
+        len(palette) * boxsize
+        + (len(palette) - 1) * gapsize
+    )
+
+    current_x = -total_width / 2
+    start_y = -750 / 2 + 130
+
+    for color in palette.values():
+
+        t.penup()
+        t.jumpto(current_x, start_y)
+        t.setheading(0)
+
+        t.pencolor(color)
+        t.fillcolor(color)
+
+        t.pendown()
+        t.begin_fill()
+
+
+
+        for side in range(4):
+            t.forward(boxsize)
+            t.left(90)
+
+        t.end_fill()
+        t.penup()
+        t.jumpto(current_x, start_y-20)
+        t.write(f"{color}",align="left",font=("Arial", 8, "normal"))
+
+        current_x = current_x + boxsize + gapsize
+
+
+poster_tc(t,palette_options[color_choice])
+
+grid_right = x_offset + size * ncols
+
+t.hideturtle()
+t.penup()
+t.jumpto(grid_right+30, 0)
+t.pencolor((235, 202, 125))
+t.write(title_text,align="left",font=("Arial", 40, "bold"))
+t.jumpto(grid_right+60, -50)
+t.pencolor((235, 150, 125))
+t.write(poster_name,align="left",font=("Arial", 20, "bold"))
+
+t.done()
