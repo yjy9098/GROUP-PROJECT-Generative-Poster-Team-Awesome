@@ -31,7 +31,7 @@ Copy this code into a Colab Notebook.
 from project import generate_poster
 generate_poster()
 
-Or click below to open an example notebook in Google Colab and generate your own poster!
+Click the button below to run our poster generator:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1I4BGPpbicWTfXsBIvQOUT__aYjnlwuQi?usp=sharing)
 
