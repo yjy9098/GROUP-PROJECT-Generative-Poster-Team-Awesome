@@ -30,7 +30,7 @@ Copy this code into a Colab Notebook.
 !pip install -r requirements.txt
 from project import generate_poster
 generate_poster()
-、、、
+```
 
 Click the button below to run our poster generator:
 
