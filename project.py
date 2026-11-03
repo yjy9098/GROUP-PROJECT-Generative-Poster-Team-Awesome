@@ -166,3 +166,24 @@ t.pencolor((235, 150, 125))
 t.write(poster_name,align="left",font=("Arial", 20, "bold"))
 
 t.done()
+
+
+
+!pip install cairosvg
+
+t.hideturtle()
+
+s = Screen()
+s.saveSVG("tile_poster.svg")
+
+import cairosvg
+
+cairosvg.svg2png(
+    url="tile_poster.svg",
+    write_to="tile_poster.png"
+)
+
+from google.colab import files
+files.download("tile_poster.png")
+
+done()
