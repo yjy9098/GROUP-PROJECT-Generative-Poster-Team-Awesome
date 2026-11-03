@@ -1,3 +1,5 @@
+import numpy as np
+
 palette_options = {}
 
 #First persons color palette
