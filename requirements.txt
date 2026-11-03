@@ -1,3 +1,4 @@
 # Libraries required for the poster generator
 
 ColabTurtlePlus
+cairosvg
