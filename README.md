@@ -30,6 +30,7 @@ Copy this code into a Colab Notebook.
 !pip install -r requirements.txt
 from project import generate_poster
 generate_poster()
+、、、
 
 Click the button below to run our poster generator:
 
@@ -49,3 +50,4 @@ Click the button below to run our poster generator:
 - `PaletteOptions.py` – Available color palettes.
 - `requirements.txt` – Required Python libraries.
 - `example_poster.svg` – Scalable vector version of an example final poster image.
+
