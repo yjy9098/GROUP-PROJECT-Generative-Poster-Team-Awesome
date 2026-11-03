@@ -775,3 +775,7 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
   t.penup()
   t.setheading(0)
   t.pencolor((0, 0, 0))
+
+
+
+tile_functions = [draw_emma_tile, draw_tae_tile, draw_jingyi_tile]
