@@ -2,7 +2,7 @@
 
 ![Example final poster](example_poster.svg)
 
-**Created by:** Jingyi, Emma, and Tae
+**Created by:** Jingyi, Emma, and Tae 
 **Course:** Creative Coding, Pratt Institute  
 **Semester:** Fall 2026
 
@@ -25,7 +25,7 @@ What can the users modify?
 Copy this code into a Colab Notebook.
 
 ```python
-!git clone https://github.com/sarahchase/cc-f26-group-project.git
+!git clone (https://github.com/yjy9098/GROUP-PROJECT-Generative-Poster-Team-Awesome.git)
 %cd cc-f26-group-project
 !pip install -r requirements.txt
 from project import generate_poster
