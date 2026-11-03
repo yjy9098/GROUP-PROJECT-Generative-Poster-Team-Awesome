@@ -33,7 +33,7 @@ generate_poster()
 
 Or click below to open an example notebook in Google Colab and generate your own poster!
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1iho7fD12AxIXqKzoNI5bAI-NxnKauBgz?usp=sharing)
+[![Open In Colab]([https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1iho7fD12AxIXqKzoNI5bAI-NxnKauBgz?usp=sharing](https://colab.research.google.com/drive/1I4BGPpbicWTfXsBIvQOUT__aYjnlwuQi?usp=sharing))
 
 ### How to Use
 
