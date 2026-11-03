@@ -28,7 +28,12 @@ jingyi_palette = {
 }
 palette_options["Jingyi_palette"] = jingyi_palette
 
-# Run this cell to look at all the names.
+random = {
+    "bg": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
+    "primary": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
+    "secondary": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
+    "accent": (np.random.rand(255), np.random.rand(255), np.random.rand(255))
+}
 
 palette_names = list(palette_options)
 palette_names.append("random")
