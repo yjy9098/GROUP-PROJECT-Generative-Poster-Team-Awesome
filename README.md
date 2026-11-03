@@ -26,11 +26,10 @@ Copy this code into a Colab Notebook.
 
 ```python
 !git clone https://github.com/yjy9098/GROUP-PROJECT-Generative-Poster-Team-Awesome.git
-%cd cc-f26-group-project
+%cd GROUP-PROJECT-Generative-Poster-Team-Awesome
 !pip install -r requirements.txt
 from project import generate_poster
 generate_poster()
-```
 
 Or click below to open an example notebook in Google Colab and generate your own poster!
 
