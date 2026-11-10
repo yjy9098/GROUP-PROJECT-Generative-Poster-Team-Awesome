@@ -40,9 +40,12 @@ def generate_poster():
   shrink = 0.8
   
   if color_choice == "random":
-      random_name = list(palette_options)[np.random.randint(len(palette_options))]
-      palette = palette_options[random_name]
-      print(f"Random picked: {random_name}")
+      palette = {
+        "bg": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
+        "primary": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
+        "secondary": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
+        "accent": (np.random.rand(255), np.random.rand(255), np.random.rand(255))
+      }
   else:
       palette = palette_options[color_choice]
   
