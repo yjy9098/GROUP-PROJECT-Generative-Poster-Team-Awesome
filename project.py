@@ -115,45 +115,43 @@ def generate_poster():
   
   t.hideturtle()
  
-  
   def poster_tc(t, palette):
-  
-      boxsize = 950/ 20
-      gapsize = 950 / 7
-  
-      total_width = (
-          len(palette) * boxsize
-          + (len(palette) - 1) * gapsize
-      )
-  
-      current_x = -total_width / 2
-      start_y = -750 / 2 + 130
-  
-      for color in palette.values():
-  
-          t.penup()
-          t.jumpto(current_x, start_y)
-          t.setheading(0)
-  
-          t.pencolor(color)
-          t.fillcolor(color)
-  
-          t.pendown()
-          t.begin_fill()
-  
-  
-  
-          for side in range(4):
-              t.forward(boxsize)
-              t.left(90)
-  
-          t.end_fill()
-          t.penup()
-          t.jumpto(current_x+25, start_y-30)
-          t.write(f"{color}",align="center",font=("Arial", 12, "normal"))
-  
-          current_x = current_x + boxsize + gapsize
-  
+
+    boxsize = 950 / 20
+    gapsize = 950 / 7
+
+    total_width = (len(palette) * boxsize+ (len(palette) - 1) * gapsize)
+
+    start_x = -total_width / 2 
+    start_y = -750 / 2 + 130
+
+    colors = list(palette.values())
+
+    for i in range(4):
+
+        color = colors[i]
+
+        x = start_x + i * (boxsize + gapsize)
+
+        t.penup()
+        t.jumpto(x, start_y)
+        t.setheading(0)
+
+        t.pencolor(color)
+        t.fillcolor(color)
+
+        t.pendown()
+        t.begin_fill()
+
+        for side in range(4):
+            t.forward(boxsize)
+            t.left(90)
+
+        t.end_fill()
+        t.penup()
+
+        t.jumpto(x + boxsize / 2,start_y - 30)
+        t.write(f"{color}",align="center",font=("Arial", 12, "normal"))
   
   poster_tc(t,palette)
   
