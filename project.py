@@ -167,7 +167,6 @@ def generate_poster():
   
   t.done()
   
-  t.hideturtle()
   
   saveSVG("tile_poster.svg")
   
@@ -176,4 +175,4 @@ def generate_poster():
       write_to="tile_poster.png"
   )
 
-
+  t.hideturtle()
