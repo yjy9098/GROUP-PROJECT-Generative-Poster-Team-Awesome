@@ -1,5 +1,6 @@
 # Generative Poster Project Team Awesome
 
+!
 ![Example final poster](example_poster.png)
 
 **Created by:** Jingyi, Emma, and Tae  
