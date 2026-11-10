@@ -28,9 +28,8 @@ jingyi_palette = {
     "secondary": (226, 215, 180),
     "accent": (155, 38, 38)
 }
+
 palette_options["jingyi_palette"] = jingyi_palette
-
-
 
 palette_names = list(palette_options)
 palette_names.append("random")
