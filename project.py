@@ -16,7 +16,7 @@ def generate_poster():
   color_choice = input("What color palette would you like?")
   
   while color_choice not in palette_names:
-      color_choice = input("Try again! The palette options are emma_palette, tae_palette, jingyi_palette, and random:")
+      color_choice = input("Try again! The palette options are [palette_names]:")
   
   print("Good job!")
   
