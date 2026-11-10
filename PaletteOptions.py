@@ -30,12 +30,7 @@ jingyi_palette = {
 }
 palette_options["jingyi_palette"] = jingyi_palette
 
-random = {
-    "bg": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
-    "primary": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
-    "secondary": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
-    "accent": (np.random.rand(255), np.random.rand(255), np.random.rand(255))
-}
+
 
 palette_names = list(palette_options)
 palette_names.append("random")
