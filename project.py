@@ -158,18 +158,18 @@ def generate_poster():
   poster_tc(t,palette)
   
   grid_right = x_offset + size * ncols
-  
-  t.hideturtle()
+    
+ 
   t.penup()
-  t.jumpto(grid_right+30, 250)
+  t.jumpto(grid_right+50, 200)
   t.pencolor((235, 202, 125))
-  t.write(title_text,align="left",font=("Arial", 40, "bold"))
-  t.jumpto(grid_right+30, 200)
+  t.write(title_text,align="left",font=("Arial", 50, "bold"))
+  t.jumpto(grid_right+50, 150)
   t.pencolor((235, 150, 125))
   t.write(poster_name,align="left",font=("Arial", 20, "bold"))
-  
+    
   t.done()
-  
+
   
   saveSVG("tile_poster.svg")
   
