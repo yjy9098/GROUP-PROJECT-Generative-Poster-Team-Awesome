@@ -149,7 +149,7 @@ def generate_poster():
   
           t.end_fill()
           t.penup()
-          t.jumpto(current_x, start_y-20)
+          t.jumpto(current_x+25, start_y-30)
           t.write(f"{color}",align="center",font=("Arial", 12, "normal"))
   
           current_x = current_x + boxsize + gapsize
