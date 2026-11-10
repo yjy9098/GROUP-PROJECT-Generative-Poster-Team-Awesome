@@ -38,7 +38,7 @@ Click the button below to run our poster generator:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1I4BGPpbicWTfXsBIvQOUT__aYjnlwuQi?usp=sharing)
 
 ## Code Explanation
-The user is given an input 
+The user is given a place to input their name and title of 
 
 ### How to Use
 
