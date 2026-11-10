@@ -2,7 +2,7 @@
 
 ![Example final poster](example_poster.png)
 
-**Created by:** Jingyi, Emma, and Tae 
+**Created by:** Jingyi, Emma, and Tae  
 **Course:** Creative Coding, Pratt Institute  
 **Semester:** Fall 2026
 
