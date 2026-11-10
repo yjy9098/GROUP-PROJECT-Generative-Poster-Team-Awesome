@@ -111,9 +111,7 @@ def generate_poster():
   
   
   t.hideturtle()
-  done()
-  
-  
+ 
   
   def poster_tc(t, palette):
   
