@@ -36,6 +36,9 @@ Click the button below to run our poster generator:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1I4BGPpbicWTfXsBIvQOUT__aYjnlwuQi?usp=sharing)
 
+## Code Explanation
+The 
+
 ### How to Use
 
 1. Open the notebook in Google Colab.
