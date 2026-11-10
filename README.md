@@ -25,7 +25,7 @@ Users can modify poster title, authorship, color palette, and how many rows and 
 Copy this code into a Colab Notebook.
 
 ```python
-!git clone https://github.com/yjy9098/GROUP-PROJECT-Generative-Poster-Team-Awesome.git
+!git clone https://github.com/yjy9098/GROUP-PROJECT-Generative-Poster-Team-Awesome
 %cd GROUP-PROJECT-Generative-Poster-Team-Awesome
 !pip install -r requirements.txt
 from project import generate_poster
