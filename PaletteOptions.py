@@ -28,7 +28,7 @@ jingyi_palette = {
     "secondary": (226, 215, 180),
     "accent": (155, 38, 38)
 }
-palette_options["Jingyi_palette"] = jingyi_palette
+palette_options["jingyi_palette"] = jingyi_palette
 
 random = {
     "bg": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
