@@ -41,10 +41,10 @@ def generate_poster():
   
   if color_choice == "random":
       palette = {
-        "bg": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
-        "primary": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
-        "secondary": (np.random.rand(255), np.random.rand(255), np.random.rand(255)),
-        "accent": (np.random.rand(255), np.random.rand(255), np.random.rand(255))
+        "bg": (np.random.randint(256), np.random.randint(256), np.random.randint(256)),
+        "primary": (np.random.randint(256), np.random.randint(256), np.random.randint(256)),
+        "secondary": (np.random.randint(256), np.random.randint(256), np.random.randint(256)),
+        "accent": (np.random.randint(256), np.random.randint(256), np.random.randint(256))
       }
   else:
       palette = palette_options[color_choice]
