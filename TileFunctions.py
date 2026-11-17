@@ -515,72 +515,59 @@ def draw_tae_tile(t, x, y, size, rotation, palette, tile_type="center"):
 
 def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
   """
-  Draws a parameterized geometric tile centered at (x, y).
+  Draws a geometric tile centered at (x, y).
 
   Parameters:
   - t: Turtle object
-  - x, y (float/int): Center coordinates of the tile
-  - size (float/int): Width and height of the tile bounding box
-  - rotation (int): Orientation angle (0, 90, 180, 270)
-  - palette (dict): RGB tuples with keys 'bg', 'primary', 'secondary', 'accent'
-  - tile_type (str): "center", "border", or "corner" (defaults to "center")
+  - x, y: Center coordinates
+  - size: Width and height of the tile
+  - rotation: Rotation angle
+  - palette: Color palette dictionary
+  - tile_type: "center", "border", or "corner"
   """
 
   # ==========================================
   # TURTLE SETUP
   # ==========================================
+
   t.penup()
   t.jumpto(x, y)
   t.setheading(rotation)
 
-  # Useful relative dimension constants
   half = size / 2
   quarter = size / 4
 
 
   # ==========================================
-  # BASE BACKGROUND
-  # All tile variations share a clean backdrop
+  # DRAW TILE BACKGROUND
   # ==========================================
 
-  # Move to the bottom-left corner
-  t.forward(-half)
+  t.backward(half)
   t.left(90)
-  t.forward(-half)
+  t.backward(half)
   t.right(90)
 
-  # Set the background color
   t.pencolor(palette["bg"])
   t.fillcolor(palette["bg"])
   t.pensize(2)
 
-  # Draw the background square
   t.pendown()
   t.begin_fill()
 
-  for _ in range(4):
-      t.forward(size)
-      t.left(90)
+  for i in range(4):
+    t.forward(size)
+    t.left(90)
 
   t.end_fill()
   t.penup()
 
-  # Return to the center
   t.jumpto(x, y)
   t.setheading(rotation)
 
 
-  ######################### YOUR CHANGES START HERE ###########################
-
-
   # ==========================================
-  # CONDITIONAL GEOMETRY
-  # ==========================================
-
-
-  # ------------------------------------------
   # OPTION 1: CORNER TILE
-  # ------------------------------------------
+  # ==========================================
 
   if tile_type == "corner":
 
@@ -593,7 +580,7 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
     t.penup()
     t.jumpto(x, y)
     t.setheading(rotation)
-    
+
     t.backward(safe_half)
 
     t.pencolor(palette["primary"])
@@ -626,164 +613,164 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
     t.penup()
 
 
-  # ------------------------------------------
+  # ==========================================
   # OPTION 2: BORDER TILE
-  # ------------------------------------------
+  # ==========================================
 
   elif tile_type == "border":
 
-
-      t.penup()
-      t.jumpto(x, y)
-      t.setheading(rotation)
-
-      t.backward(half)
-      t.pencolor(palette["primary"])
-      t.pensize(2)
-      t.pendown()
-      t.forward(size)
-      t.penup()
-
-
-  # ------------------------------------------
-  # OPTION 3: CENTER TILE
-  # ------------------------------------------
-
-  else:
-
-
-      t.penup()
-      t.jumpto(x, y)
-      t.setheading(rotation + 45)
-
-
-      t.backward(quarter * 1.1)
-      t.left(90)
-      t.backward(quarter * 1.1)
-      t.right(90)
-
-
-      t.pencolor(palette["secondary"])
-      t.pensize(3)
-      t.pendown()
-
-      for i in range(4):
-          t.forward(quarter * 2.2)
-          t.left(90)
-
-      t.penup()
-
-      t.jumpto(x, y)
-      t.setheading(rotation)
-
-
-      t.backward(quarter * 0.65)
-      t.left(90)
-      t.backward(quarter * 0.65)
-      t.right(90)
-
-
-      t.pencolor(palette["primary"])
-      t.pensize(3)
-      t.pendown()
-
-      for i in range(4):
-          t.forward(quarter * 1.3)
-          t.left(90)
-
-      t.penup()
-
-
-
-
-      t.pencolor(palette["primary"])
-      t.pensize(2)
-
-      for i in range(4):
-
-          t.penup()
-          t.jumpto(x, y)
-          t.setheading(rotation + i * 90)
-
-          t.pendown()
-          t.forward(quarter * 1.5)
-
-      t.penup()
-
-
-      # ======================================
-      # DRAW FOUR DIAGONAL LINES
-      # ======================================
-
-      t.pencolor(palette["secondary"])
-      t.pensize(2)
-
-      for i in range(4):
-
-          t.penup()
-          t.jumpto(x, y)
-          t.setheading(rotation + 45 + i * 90)
-
-          t.pendown()
-          t.forward(quarter * 1.2)
-
-      t.penup()
-
-
-      # ======================================
-      # DRAW THE CENTER DOTS
-      # ======================================
-
-      t.jumpto(x, y)
-
-      # Large red dot
-      t.pencolor(palette["accent"])
-      t.dot(quarter * 0.65)
-
-      # Small ivory dot
-      t.pencolor(palette["secondary"])
-      t.dot(quarter * 0.25)
-
- 
-  # ==========================================
-  # DRAW BORDER
-  # ==========================================
     t.penup()
     t.jumpto(x, y)
     t.setheading(rotation)
 
-    
-    t.backward(size / 2)
-    t.left(90)
-    t.backward(size / 2)
-    t.right(90)
+    t.backward(half)
 
     t.pencolor(palette["primary"])
     t.pensize(2)
     t.pendown()
 
-    for i in range(4):
-        t.forward(size)
-        t.left(90)
+    
+    t.forward(size)
 
     t.penup()
-  # Do not draw a square border around each tile.
-  # The corner and border tiles will form one large
-  # border when all tiles are placed together.
 
 
-  ######################### YOUR CHANGES END HERE #############################
+  # ==========================================
+  # OPTION 3: CENTER TILE
+  # ==========================================
+
+  else:
+
+    # ------------------------------------------
+    # Draw the large rotated square
+    # ------------------------------------------
+
+    t.penup()
+    t.jumpto(x, y)
+    t.setheading(rotation + 45)
+
+    t.backward(quarter * 1.1)
+    t.left(90)
+    t.backward(quarter * 1.1)
+    t.right(90)
+
+    t.pencolor(palette["secondary"])
+    t.pensize(3)
+    t.pendown()
+
+    for i in range(4):
+      t.forward(quarter * 2.2)
+      t.left(90)
+
+    t.penup()
+
+
+    # ------------------------------------------
+    # Draw the small square
+    # ------------------------------------------
+
+    t.jumpto(x, y)
+    t.setheading(rotation)
+
+    t.backward(quarter * 0.65)
+    t.left(90)
+    t.backward(quarter * 0.65)
+    t.right(90)
+
+    t.pencolor(palette["primary"])
+    t.pensize(3)
+    t.pendown()
+
+    for i in range(4):
+      t.forward(quarter * 1.3)
+      t.left(90)
+
+    t.penup()
+
+
+    # ------------------------------------------
+    # Draw four straight lines
+    # ------------------------------------------
+
+    t.pencolor(palette["primary"])
+    t.pensize(2)
+
+    for i in range(4):
+
+      t.penup()
+      t.jumpto(x, y)
+      t.setheading(rotation + i * 90)
+
+      t.pendown()
+      t.forward(quarter * 1.5)
+
+    t.penup()
+
+
+    # ------------------------------------------
+    # Draw four diagonal lines
+    # ------------------------------------------
+
+    t.pencolor(palette["secondary"])
+    t.pensize(2)
+
+    for i in range(4):
+
+      t.penup()
+      t.jumpto(x, y)
+      t.setheading(rotation + 45 + i * 90)
+
+      t.pendown()
+      t.forward(quarter * 1.2)
+
+    t.penup()
+
+
+    # ------------------------------------------
+    # Draw the center dots
+    # ------------------------------------------
+
+    t.jumpto(x, y)
+
+    # Large accent dot
+    t.pencolor(palette["accent"])
+    t.dot(quarter * 0.65)
+
+    # Small secondary dot
+    t.pencolor(palette["secondary"])
+    t.dot(quarter * 0.25)
+
+
+  # ==========================================
+  # DRAW A BORDER AROUND THE TILE
+  # ==========================================
+
+  t.penup()
+  t.jumpto(x, y)
+  t.setheading(rotation)
+
+  t.backward(half)
+  t.left(90)
+  t.backward(half)
+  t.right(90)
+  t.pencolor(palette["primary"])
+  t.pensize(2)
+  t.pendown()
+
+  for i in range(4):
+    t.forward(size)
+    t.left(90)
+
+  t.penup()
 
 
   # ==========================================
   # TURTLE TEARDOWN
-  # Reset pen, heading, and state
   # ==========================================
-  
+
   t.penup()
   t.setheading(0)
   t.pencolor((0, 0, 0))
-
 
 
 tile_functions = [draw_emma_tile, draw_tae_tile, draw_jingyi_tile]
