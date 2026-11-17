@@ -571,19 +571,17 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
 
   if tile_type == "corner":
 
-    overlap = size * 0.04
-
     t.penup()
     t.jumpto(x, y)
     t.setheading(rotation)
-    
-    t.backward(half + overlap)
+
+    t.backward(half)
 
     t.pencolor(palette["primary"])
-    t.pensize(4)
+    t.pensize(3)
     t.pendown()
 
-    t.forward(quarter * 1.2 + overlap)
+    t.forward(quarter * 1.2)
 
     t.left(90)
     t.forward(quarter * 1.2)
@@ -605,11 +603,9 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
 
     t.left(90)
 
-    
-    t.forward(quarter * 0.5 + overlap)
+    t.forward(quarter * 0.4)
 
     t.penup()
-
 
   # ==========================================
   # OPTION 2: BORDER TILE
