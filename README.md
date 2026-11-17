@@ -32,7 +32,6 @@ Copy this code into a Colab Notebook.
 !pip install -q -r requirements.txt
 from project import generate_poster
 generate_poster()
-(t.hideturtle())
 ```
 
 Click the button below to run our poster generator:
