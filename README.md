@@ -1,6 +1,6 @@
 # Generative Poster Project Team Awesome
 
-![Example final poster](example_poster.png)
+![Example final poster](poster.svg)
 
 **Created by:** Jingyi, Emma, and Tae  
 **Course:** Creative Coding, Pratt Institute  
