@@ -629,7 +629,7 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
     t.pendown()
 
     
-    t.forward(size*0.98)
+    t.forward(size*0.95)
 
     t.penup()
 
