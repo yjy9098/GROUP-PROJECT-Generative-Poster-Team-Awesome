@@ -584,50 +584,46 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
 
   if tile_type == "corner":
 
-      t.penup()
-      t.jumpto(x, y)
-      t.setheading(rotation)
+    margin = size * 0.06
 
+    safe_size = size - margin * 2
+    safe_half = safe_size / 2
+    safe_quarter = safe_size / 4
 
-      t.backward(half)
+    t.penup()
+    t.jumpto(x, y)
+    t.setheading(rotation)
+    
+    t.backward(safe_half)
 
+    t.pencolor(palette["primary"])
+    t.pensize(5)
+    t.pendown()
 
-      t.pencolor(palette["primary"])
-      t.pensize(5)
-      t.pendown()
+    t.forward(safe_quarter * 1.2)
 
+    t.left(90)
+    t.forward(safe_quarter * 1.2)
 
-      t.forward(quarter * 1.2)
+    t.left(90)
+    t.forward(safe_quarter * 0.8)
 
+    t.left(90)
+    t.forward(safe_quarter * 0.6)
 
-      t.left(90)
-      t.forward(quarter * 1.2)
+    t.left(90)
+    t.forward(safe_quarter * 0.4)
 
+    t.left(90)
+    t.forward(safe_quarter)
 
-      t.left(90)
-      t.forward(quarter * 0.8)
+    t.right(90)
+    t.forward(safe_quarter * 1.2)
 
+    t.left(90)
+    t.forward(safe_quarter * 0.35)
 
-      t.left(90)
-      t.forward(quarter * 0.6)
-
-
-      t.left(90)
-      t.forward(quarter * 0.4)
-
-
-      t.left(90)
-      t.forward(quarter)
-
-
-      t.right(90)
-      t.forward(quarter * 1.2)
-
-
-      t.left(90)
-      t.forward(quarter * 0.4)
-
-      t.penup()
+    t.penup()
 
 
   # ------------------------------------------
@@ -641,17 +637,11 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
       t.jumpto(x, y)
       t.setheading(rotation)
 
-
       t.backward(half)
-
-
       t.pencolor(palette["primary"])
       t.pensize(5)
       t.pendown()
-
-
       t.forward(size)
-
       t.penup()
 
 
