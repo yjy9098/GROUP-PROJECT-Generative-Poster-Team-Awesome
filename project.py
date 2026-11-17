@@ -159,26 +159,26 @@ for i in range(4):
         font=("Arial", 12, "normal")
     )
   
-  grid_right = x_offset + size * ncols
+grid_right = x_offset + size * ncols
     
  
-  t.penup()
-  t.jumpto(grid_right+50, 200)
-  t.pencolor((235, 202, 125))
-  t.write(title_text,align="left",font=("Arial", 50, "bold"))
-  t.jumpto(grid_right+50, 150)
-  t.pencolor((235, 150, 125))
-  t.write(poster_name,align="left",font=("Arial", 20, "bold"))
+t.penup()
+t.jumpto(grid_right+50, 200)
+t.pencolor((235, 202, 125))
+t.write(title_text,align="left",font=("Arial", 50, "bold"))
+t.jumpto(grid_right+50, 150)
+t.pencolor((235, 150, 125))
+t.write(poster_name,align="left",font=("Arial", 20, "bold"))
     
-  t.done()
+t.done()
 
-  t.hideturtle()
+t.hideturtle()
 
-  saveSVG("/content/tile_poster.svg")
+saveSVG("/content/tile_poster.svg")
 
-  cairosvg.svg2png(
+cairosvg.svg2png(
     url="/content/tile_poster.svg",
     write_to="/content/tile_poster.png"
   )
 
-  done()
+done()
