@@ -752,7 +752,7 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
     t.jumpto(x, y)
     t.setheading(rotation)
 
-    # 从中心移动到左下角
+    
     t.backward(size / 2)
     t.left(90)
     t.backward(size / 2)
