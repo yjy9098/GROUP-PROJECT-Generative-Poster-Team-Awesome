@@ -571,14 +571,19 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
 
   if tile_type == "corner":
 
+    pattern_width = max(2, int(size * 0.025))
+    border_width = max(6, int(size * 0.06))
+
+    inset = border_width / 2
+
     t.penup()
     t.jumpto(x, y)
     t.setheading(rotation)
 
-    t.backward(half)
+    t.backward(half - inset)
 
     t.pencolor(palette["primary"])
-    t.pensize(3)
+    t.pensize(pattern_width)
     t.pendown()
 
     t.forward(quarter * 1.2)
@@ -603,10 +608,10 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
 
     t.left(90)
 
-    t.forward(quarter * 0.4)
+    # Stop inside the second border
+    t.forward(quarter * 0.4 - inset)
 
     t.penup()
-
   # ==========================================
   # OPTION 2: BORDER TILE
   # ==========================================
