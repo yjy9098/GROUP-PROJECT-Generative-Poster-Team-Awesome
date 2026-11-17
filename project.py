@@ -168,11 +168,13 @@ def generate_poster():
     
   t.done()
 
-  
-saveSVG("/content/tile_poster.svg")
+  t.hideturtle()
 
-cairosvg.svg2png(
+  saveSVG("/content/tile_poster.svg")
+
+  cairosvg.svg2png(
     url="/content/tile_poster.svg",
     write_to="/content/tile_poster.png"
-)
-  t.hideturtle()
+  )
+
+  done()
