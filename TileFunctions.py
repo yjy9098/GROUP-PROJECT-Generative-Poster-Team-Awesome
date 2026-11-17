@@ -583,7 +583,7 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
     t.backward(half - inset)
 
     t.pencolor(palette["primary"])
-    t.pensize(pattern_width)
+    t.pensize(4)
     t.pendown()
 
     t.forward(quarter * 1.2)
