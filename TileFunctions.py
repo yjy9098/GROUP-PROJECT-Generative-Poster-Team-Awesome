@@ -744,11 +744,29 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
       t.pencolor(palette["secondary"])
       t.dot(quarter * 0.25)
 
-
+ 
   # ==========================================
   # DRAW BORDER
   # ==========================================
+    t.penup()
+    t.jumpto(x, y)
+    t.setheading(rotation)
 
+    # 从中心移动到左下角
+    t.backward(size / 2)
+    t.left(90)
+    t.backward(size / 2)
+    t.right(90)
+
+    t.pencolor(palette["primary"])
+    t.pensize(2)
+    t.pendown()
+
+    for i in range(4):
+        t.forward(size)
+        t.left(90)
+
+    t.penup()
   # Do not draw a square border around each tile.
   # The corner and border tiles will form one large
   # border when all tiles are placed together.
@@ -761,7 +779,7 @@ def draw_jingyi_tile(t, x, y, size, rotation, palette, tile_type="center"):
   # TURTLE TEARDOWN
   # Reset pen, heading, and state
   # ==========================================
-
+  
   t.penup()
   t.setheading(0)
   t.pencolor((0, 0, 0))
