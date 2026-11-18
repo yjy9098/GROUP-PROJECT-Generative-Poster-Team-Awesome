@@ -40,80 +40,73 @@ def generate_poster():
   shrink = 0.8
   
   if color_choice == "random":
-      palette = {
-        "bg": (np.random.randint(256), np.random.randint(256), np.random.randint(256)),
-        "primary": (np.random.randint(256), np.random.randint(256), np.random.randint(256)),
-        "secondary": (np.random.randint(256), np.random.randint(256), np.random.randint(256)),
-        "accent": (np.random.randint(256), np.random.randint(256), np.random.randint(256))
-      }
-  else:
-      palette = palette_options[color_choice]
-  
-  
-  size_horiz = (screen_width - border * 2) / ncols
-  size_vert = (screen_height - border - vertical_spacing_below) / nrows
-  size = min(size_horiz, size_vert) * shrink
-  
-  print(f"Tile size: {size}")
-  
-  clearscreen()
-  setup(screen_width, screen_height)
-  t = Turtle()
-  t.speed(0)
-  
-  
-  x_offset = -screen_width / 2 + border + size / 2
-  y_offset = screen_height / 2 - border - size / 2
-  
-  corner_home = {
-      "draw_emma_tile": 225,
-      "draw_tae_tile": 45,
-      "draw_jingyi_tile": 135,
-  }
-  
-  for row in range(nrows):
-    y = y_offset - size * row
-  
-    for col in range(ncols):
-      x = x_offset + size * col
-  
-      F = tile_functions[np.random.randint(len(tile_functions))]
-  
-      if row == 0:
-        if col == 0:
-          tile_type = "corner"
-          corner_angle = 135
-        elif col == ncols - 1:
-          tile_type = "corner"
-          corner_angle = 45
-        else:
-          tile_type = "border"
-          rotation = np.random.randint(2) * 180
-      elif row == nrows - 1:
-        if col == 0:
-          tile_type = "corner"
-          corner_angle = 225
-        elif col == ncols - 1:
-          tile_type = "corner"
-          corner_angle = 315
-        else:
-          tile_type = "border"
-          rotation = np.random.randint(2) * 180
+    random_name = list(palette_options)[np.random.randint(len(palette_options))]
+    palette = palette_options[random_name]
+    print(f"Random picked: {random_name}")
+    
+else:
+    palette = palette_options[color_choice]
+
+
+size_horiz = (screen_width - border * 2) / ncols
+size_vert = (screen_height - border - vertical_spacing_below) / nrows
+size = min(size_horiz, size_vert) * shrink
+
+print(f"Tile size: {size}")
+
+clearscreen()
+setup(screen_width, screen_height)
+t = Turtle()
+t.speed(0)
+
+x_offset = -screen_width / 2 + border + size / 2
+y_offset = screen_height / 2 - border - size / 2
+
+
+corner_homes = [225, 45, 135]
+
+for row in range(nrows):
+  y = y_offset - size * row
+
+  for col in range(ncols):
+    x = x_offset + size * col
+
+   
+    idx = np.random.randint(len(tile_functions))
+    F = tile_functions[idx]
+
+    if row == 0:
+      if col == 0:
+        tile_type = "corner"
+        corner_angle = 135
+      elif col == ncols - 1:
+        tile_type = "corner"
+        corner_angle = 45
       else:
-        if col == 0 or col == ncols - 1:
-          tile_type = "border"
-          rotation = 90 + np.random.randint(2) * 180
-        else:
-          tile_type = "center"
-          rotation = np.random.randint(4) * 90
-  
-      if tile_type == "corner":
-        rotation = (corner_angle - corner_home.get(F.__name__, 135)) % 360
-  
-      F(t, x, y, size, rotation, palette, tile_type)
-  
-  
-  t.hideturtle()
+        tile_type = "border"
+        rotation = np.random.randint(2) * 180
+    elif row == nrows - 1:
+      if col == 0:
+        tile_type = "corner"
+        corner_angle = 225
+      elif col == ncols - 1:
+        tile_type = "corner"
+        corner_angle = 315
+      else:
+        tile_type = "border"
+        rotation = np.random.randint(2) * 180
+    else:
+      if col == 0 or col == ncols - 1:
+        tile_type = "border"
+        rotation = 90 + np.random.randint(2) * 180
+      else:
+        tile_type = "center"
+        rotation = np.random.randint(4) * 90
+
+    if tile_type == "corner":
+      rotation = (corner_angle - corner_homes[idx]) % 360
+
+    F(t, x, y, size, rotation, palette, tile_type)
  
 boxsize = 950 / 20
 gapsize = 950 / 7
