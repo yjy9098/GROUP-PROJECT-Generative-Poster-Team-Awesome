@@ -163,8 +163,6 @@ def generate_poster():
   t.pencolor((235, 150, 125))
   t.write(poster_name,align="left",font=("Arial", 20, "bold"))
       
-  t.done()
-  
   t.hideturtle()
   
   saveSVG("/content/tile_poster.svg")
